@@ -1,3 +1,7 @@
+var loginData = localStorage.getItem("loginData");
+if (loginData) {
+    location.replace("dashboard/dashboard.html");
+}
 function login() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
