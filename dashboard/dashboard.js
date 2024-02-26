@@ -90,7 +90,7 @@ function deleteRow(id) {
 
 // Function to delete all data
 function deleteData() {
-    localStorage.clear();
+    localStorage.removeItem("userData"),
     document.getElementById("dataBody").innerHTML = ''; // Clear table data
 }
 
