@@ -107,8 +107,8 @@ button:hover {
 
 .manipulate {
   display: flex;
-  justify-content: space-around;
-  margin: 2% -33%;
+  justify-content: space-between;
+  padding: 20px 3%;
 }
 
 .manipulate select {
