@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Dashboard</h1>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="searchData()" class="head-btn">Search</button>
+        </div>
+        <button type="logout" onclick="logout()" class="head-btn">Logout</button>
+    </div>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="dataBody">
+        </tbody>
+    </table>
+    <div class="manipulate">
+        <div class="sort">
+            <select id="sortSelect">
+                <option value="asc">Age Low to High</option>
+                <option value="desc">Age High to Low</option>
+            </select>
+            <button onclick="sortData()">Sort</button>
+        </div>
+        <div class="mani-btn">
+            <button onclick="addNewData()">Add New Data</button>
+            <button onclick="deleteData()">Delete All data</button>
+        </div>
+    </div>
+
+    <div id="add-data" class="add-data">
+        <div class="add-form">
+            <h2>Add new user data:</h2>
+            <form id="dataForm">
+                <label for="id">ID:</label><br>
+                <input type="text" id="id" name="id"><br>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="age">Age:</label><br>
+                <input type="text" id="age" name="age"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+                <button type="submit" onclick="submitForm()">Add Data</button>
+                <button onclick="cancelForm()">cancel</button>
+            </form>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
