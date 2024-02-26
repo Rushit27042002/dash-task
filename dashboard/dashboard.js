@@ -1,6 +1,6 @@
 var loginData = localStorage.getItem("loginData");
 if (!loginData) {
-    location.replace("../login.html");
+    location.replace("../index.html");
 }
 // Submit data to the localStorage
 function submitForm() {
@@ -121,11 +121,11 @@ function searchData() {
     showData(searchData);
 }
 
-//logout function that  clears the local storage and redirects back to login.html page
+//logout function that  clears the local storage and redirects back to index.html page
 function logout(){
     localStorage.removeItem("loginData");
-    history.replaceState(null, null,"../login.html")
-    location.replace("../login.html");
+    history.replaceState(null, null,"../index.html")
+    location.replace("../index.html");
 }
 
 //editdata for edit existing records
